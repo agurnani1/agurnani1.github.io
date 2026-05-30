@@ -246,6 +246,164 @@
 
     <section id="projects" class="section" style="background-color: #fafafa;">
         <h2 class="section-title">Projects</h2>
+        <div class="projects-container">
+    <div class="projects-grid-circles">
+        
+        <a href="https://github.com/yourusername/project1" class="project-circle-card" target="_blank">
+            <div class="circle-content">
+                <span class="circle-category">Industrial Tech</span>
+                <h4 class="circle-title">SimRob</h4>
+                <p class="circle-desc">Process Simulate & Robotics Framework</p>
+                <span class="circle-link-text">Explore Repo →</span>
+            </div>
+        </a>
+
+        <a href="https://github.com/yourusername/project2" class="project-circle-card" target="_blank">
+            <div class="circle-content">
+                <span class="circle-category">QA / SDET</span>
+                <h4 class="circle-title">Playwright Suite</h4>
+                <p class="circle-desc">E2E Testing Matrix & Sharding Architecture</p>
+                <span class="circle-link-text">Explore Repo →</span>
+            </div>
+        </a>
+
+        <a href="https://github.com/yourusername/project3" class="project-circle-card" target="_blank">
+            <div class="circle-content">
+                <span class="circle-category">Backend QA</span>
+                <h4 class="circle-title">REST Engine</h4>
+                <p class="circle-desc">Contract & Functional Integration Test Core</p>
+                <span class="circle-link-text">Explore Repo →</span>
+            </div>
+        </a>
+
+        <a href="https://github.com/yourusername/project4" class="project-circle-card" target="_blank">
+            <div class="circle-content">
+                <span class="circle-category">Performance</span>
+                <h4 class="circle-title">Load Runner</h4>
+                <p class="circle-desc">Distributed performance script workflows</p>
+                <span class="circle-link-text">Explore Repo →</span>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<style>
+    .projects-container {
+        padding: 4rem 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* Creates the multi-column layout of circles */
+    .projects-grid-circles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+        justify-items: center;
+        align-items: center;
+    }
+
+    /* The fundamental secret to the circle shape: equal width/height aspect-ratio + border-radius */
+    .project-circle-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 320px;
+        aspect-ratio: 1 / 1; /* Forces height to perfectly match width */
+        border-radius: 50%;
+        background-color: #f5f5f5; /* Muted gray base matching her layout */
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        text-decoration: none;
+        color: #000000;
+        padding: 2rem;
+        box-sizing: border-box;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Interactive hover transition effects */
+    .project-circle-card:hover {
+        background-color: #000000;
+        color: #ffffff;
+        border-color: #000000;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .circle-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle-category {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #888888;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s;
+    }
+
+    .project-circle-card:hover .circle-category {
+        color: #aaaaaa;
+    }
+
+    .circle-title {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.5px;
+    }
+
+    .circle-desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #555555;
+        margin-bottom: 1rem;
+        max-width: 85%;
+        transition: color 0.3s;
+    }
+
+    .project-circle-card:hover .circle-desc {
+        color: #dddddd;
+    }
+
+    .circle-link-text {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    }
+
+    /* Reveals the CTA text on hover smoothly */
+    .project-circle-card:hover .circle-link-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Ensures perfect layouts on mobile phones */
+    @media (max-width: 480px) {
+        .project-circle-card {
+            max-width: 260px;
+            padding: 1.5rem;
+        }
+        .circle-title {
+            font-size: 1.25rem;
+        }
+        .circle-desc {
+            font-size: 0.8rem;
+        }
+    }
+</style>
         <div class="projects-grid">
             <div class="project-card">
                 <h3>Playwright E2E Framework</h3>
